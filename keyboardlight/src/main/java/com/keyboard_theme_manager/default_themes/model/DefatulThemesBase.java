@@ -95,17 +95,17 @@ public class DefatulThemesBase  {
             mTheme.keyAlternatives = new ThemeResource_KeyAlternatives();
             mTheme.moreKeys = new ThemeResource_MoreKeys();
             mTheme.icons = new ThemeResource_Icons();
-            Log.d(DEBUG_TAG+"5","este 22 : 1");
+            Log.d(DEBUG_TAG+"5","0");
 
             mTheme.keyboardBackground = getColorOrDrawable(mSelectedTheme.keyboard_background, resources);
             mTheme.theme_preview = getColorOrDrawable(mSelectedTheme.theme_preview,resources);
 
             mTheme.icons.ic_mic = getColorOrDrawable(mSelectedTheme.icons.ic_mic, resources);
             mTheme.icons.ic_menu = getColorOrDrawable(mSelectedTheme.icons.ic_menu, resources);
-            Log.d(DEBUG_TAG+"5","este 22 : 2");
+            Log.d(DEBUG_TAG+"5","01");
             mTheme.keyBackground.mKey_Querty = loadStateDrawable(mSelectedTheme.key_background.key_qwerty,resources);
 
-            Log.d(DEBUG_TAG+"5","este 22 : 21");
+            Log.d(DEBUG_TAG+"5","1");
 
 
 
@@ -113,22 +113,28 @@ public class DefatulThemesBase  {
             mTheme.keyBackground.mKey_Space = loadStateDrawable(mSelectedTheme.key_background.key_space,resources);
             mTheme.keyBackground.mKey_Functional = loadStateDrawable(mSelectedTheme.key_background.key_functional,resources);
 
-            Log.d(DEBUG_TAG+"5","este 22 : 22");
+            Log.d(DEBUG_TAG+"5","2");
 
             mTheme.keyBackground.mKey_Symbols = loadStateDrawable(mSelectedTheme.key_background.key_symbols,resources);
             mTheme.keyBackground.mKey_Alt = loadStateDrawable(mSelectedTheme.key_background.key_alt,resources);
             mTheme.keyBackground.noPreview = loadStateDrawable(mSelectedTheme.key_background.key_alt,resources);
-            Log.d(DEBUG_TAG+"5","este 22 : 3");
+            Log.d(DEBUG_TAG+"5","3");
             mTheme.keyLabel.normal = loadStateColor(mSelectedTheme.key_label_color.normal);
-            mTheme.keyLabel.font =  Typeface.createFromAsset(mContext.getAssets(),  mSelectedTheme.theme_font_family);
-
+            Log.d(DEBUG_TAG+"5","31");
+            try {
+                mTheme.keyLabel.font = Typeface.createFromAsset(mContext.getAssets(), mSelectedTheme.theme_font_family);
+            } catch (Exception e) {
+                Log.d(DEBUG_TAG+"5","SUGI");
+            }
+            Log.d(DEBUG_TAG+"5","32");
             mTheme.keyPreview.background = getColorOrDrawable(mSelectedTheme.key_preview.background,resources);
+            Log.d(DEBUG_TAG+"5","33");
             mTheme.keyPreview.labelColor = Color.parseColor(mSelectedTheme.key_preview.label_color);
-            Log.d(DEBUG_TAG+"5","este 22 : 4");
+            Log.d(DEBUG_TAG+"5","4");
             mTheme.shiftSymbol.def = getColorOrDrawable(mSelectedTheme.symbol_shift.default_state,resources);
             mTheme.shiftSymbol.pressed = getColorOrDrawable(mSelectedTheme.symbol_shift.pressed_state,resources);
             mTheme.shiftSymbol.locked = getColorOrDrawable(mSelectedTheme.symbol_shift.locked_state,resources);
-            Log.d(DEBUG_TAG+"5","este 22 : 5");
+            Log.d(DEBUG_TAG+"5","5");
             mTheme.actionSymbol.done = getColorOrDrawable(mSelectedTheme.symbol_action.done,resources);
             mTheme.actionSymbol.go = getColorOrDrawable(mSelectedTheme.symbol_action.go,resources);
             mTheme.actionSymbol.enter = getColorOrDrawable(mSelectedTheme.symbol_action.enter,resources);
@@ -137,12 +143,12 @@ public class DefatulThemesBase  {
             mTheme.actionSymbol.send = getColorOrDrawable(mSelectedTheme.symbol_action.send,resources);
 
             mTheme.deleteSymbol = getColorOrDrawable(mSelectedTheme.symbol_delete,resources);
-            Log.d(DEBUG_TAG+"5","este 22 : 6");
+            Log.d(DEBUG_TAG+"5","6");
             mTheme.keyAlternatives.background = getColorOrDrawable(mSelectedTheme.key_alternatives.background,resources);
             mTheme.keyAlternatives.labelColor = Color.parseColor(mSelectedTheme.key_alternatives.label_color);
 
             mTheme.moreKeys.background = getColorOrDrawable(mSelectedTheme.more_keys.background,resources);
-            Log.d(DEBUG_TAG+"5","este 22 : 7");
+            Log.d(DEBUG_TAG+"5","7");
         }
         catch (Exception e) {
             Log.d(DEBUG_TAG+"4","error parssing resourse : "+e.getMessage());
@@ -172,26 +178,27 @@ public class DefatulThemesBase  {
 
     Drawable getColorOrDrawable(String value, Resources resources) {
 
-        Log.d(DEBUG_TAG+"5","este 22 : x1 : "+value);
-        Log.d(DEBUG_TAG+"5","este 22 : x2 : "+resources);
+        Log.d(DEBUG_TAG+"7","este 22 : x1 : "+value);
+        Log.d(DEBUG_TAG+"7","este 22 : x2 : "+resources);
         try {
+            Log.d(DEBUG_TAG+"7","este 22 : x3 : ");
             return new ColorDrawable(Color.parseColor(value));
         } catch (IllegalArgumentException ignored) {
-            Log.d(DEBUG_TAG+"5","este 22 : x : "+ignored.getMessage());
+            Log.d(DEBUG_TAG+"7","este 22 : x4 : "+ignored.getMessage());
             return ContextCompat.getDrawable(mContext,resources.getIdentifier(value,"drawable",mContext.getPackageName()));
         }
     }
 
     StateListDrawable loadStateDrawable(ThemeSettings_States state_types, Resources resources) throws JSONException, IOException {
 
-        Log.d(DEBUG_TAG+"5","este 22 : 221");
+        Log.d(DEBUG_TAG+"6","este 22 : 221");
 
         StateListDrawable drawable = new StateListDrawable();
-        Log.d(DEBUG_TAG+"5","este 22 : 222");
+        Log.d(DEBUG_TAG+"6","este 22 : 222");
         drawable.addState(new int[]{android.R.attr.state_pressed},getColorOrDrawable(state_types.pressed_state, resources));
-        Log.d(DEBUG_TAG+"5","este 22 : 223");
+        Log.d(DEBUG_TAG+"6","este 22 : 223");
         drawable.addState(new int[]{},getColorOrDrawable(state_types.default_state, resources));
-        Log.d(DEBUG_TAG+"5","este 22 : 224");
+        Log.d(DEBUG_TAG+"6","este 22 : 224");
         return drawable;
     }
 
