@@ -2,7 +2,7 @@
   "theme_name" : "Simple Blue",
   "theme_preview" : "preview",
   "theme_type" : "theme_default",
-  "keyboard_background" : "bg_2",
+  "keyboard_background" : "keyboard_background",
   "theme_font_family" : "fonts/MavenPro-Regular.ttf",
 
   "icons" : {
@@ -12,32 +12,32 @@
 
   "key_background" : {
     "key_numeric" : {
-      "default_state" : "numeric_normal",
-      "pressed_state" : "numeric_presseed"
+      "default_state" : "key_numeric_normal",
+      "pressed_state" : "key_numeric_pressed"
     },
     "key_qwerty" : {
-      "default_state" : "q_normal",
-      "pressed_state" : "q_pressed"
+      "default_state" : "key_q_normal",
+      "pressed_state" : "key_q_pressed"
     },
     "key_space" : {
-      "default_state" : "space_1_normal",
-      "pressed_state" : "space_1_pressed"
+      "default_state" : "key_space_normal",
+      "pressed_state" : "key_space_pressed"
     },
     "key_functional" : {
-      "default_state" : "function_normal",
-      "pressed_state" : "function_pressed"
+      "default_state" : "key_function_normal",
+      "pressed_state" : "key_function_pressed"
     },
     "key_symbols" : {
-      "default_state" : "function_normal",
-      "pressed_state" : "function_pressed"
+      "default_state" : "key_symbol_normal",
+      "pressed_state" : "key_symbol_pressed"
     },
     "key_alt" : {
-      "default_state" : "q_normal",
-      "pressed_state" : "q_pressed"
+      "default_state" : "key_alt_normal",
+      "pressed_state" : "key_alt_pressed"
     }
   },
   "key_preview" : {
-    "background" : "popup",
+    "background" : "keyboard_key_preview_background",
     "label_color" : "#ffffff"
   },
   "key_label_color" : {
@@ -67,10 +67,10 @@
     "locked_state" :"ic_shift_locked"
   },
   "key_alternatives" : {
-    "background" : "popup",
+    "background" : "keyboard_key_preview_background",
     "label_color" : "#c90620"
   },
   "more_keys" : {
-    "background" : "popup"
+    "background" : "keyboard_key_preview_background"
   }
 }

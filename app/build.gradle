@@ -27,9 +27,9 @@ android {
         }
     }
     productFlavors {
-        keyboard_bigkeys {
+        keyboard_arabic {
             flavorDimensions "default"
-            applicationId "com.keyboardlight.bigkeys"
+            applicationId "com.keyboardlight.arabic"
             versionCode 1
             versionName "1.0.1"
             signingConfig signingConfigs.key_keyboard
