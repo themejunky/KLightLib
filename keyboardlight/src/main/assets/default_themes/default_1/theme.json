@@ -2,7 +2,7 @@
   "theme_name" : "Simple Blue",
   "theme_preview" : "preview",
   "theme_type" : "theme_default",
-  "keyboard_background" : "keyboard_background",
+  "keyboard_background" : "bg_2",
   "theme_font_family" : "fonts/MavenPro-Regular.ttf",
 
   "icons" : {
@@ -20,24 +20,24 @@
       "pressed_state" : "q_pressed"
     },
     "key_space" : {
-      "default_state" : "key_space_normal",
-      "pressed_state" : "key_space_pressed"
+      "default_state" : "space_1_normal",
+      "pressed_state" : "space_1_pressed"
     },
     "key_functional" : {
-      "default_state" : "key_function_normal",
-      "pressed_state" : "key_function_pressed"
+      "default_state" : "function_normal",
+      "pressed_state" : "function_pressed"
     },
     "key_symbols" : {
-      "default_state" : "key_symbol_normal",
-      "pressed_state" : "key_symbol_pressed"
+      "default_state" : "function_normal",
+      "pressed_state" : "function_pressed"
     },
     "key_alt" : {
-      "default_state" : "key_alt_normal",
-      "pressed_state" : "key_alt_pressed"
+      "default_state" : "q_normal",
+      "pressed_state" : "q_pressed"
     }
   },
   "key_preview" : {
-    "background" : "keyboard_key_preview_background",
+    "background" : "popup",
     "label_color" : "#ffffff"
   },
   "key_label_color" : {
@@ -52,25 +52,25 @@
   },
   "swipe_trail_color" : "#ffffff",
   "symbol_space" : "dt_1_kbd_sym_space",
-  "symbol_delete" : "ic_key_backspace",
+  "symbol_delete" : "sym_keyboard_delete",
   "symbol_action" : {
     "done" : "sym_keyboard_done",
     "go" : "sym_keyboard_done",
-    "enter" : "sym_keyboard_enter",
+    "enter" : "sym_keyboard_return",
     "next" : "sym_keyboard_done",
     "search" : "sym_keyboard_search",
     "send" : "sym_keyboard_done"
   },
   "symbol_shift" : {
-    "default_state" : "ic_shift",
-    "pressed_state" : "ic_shift_locked",
-    "locked_state" :"ic_shift_locked"
+    "default_state" : "sym_keyboard_shift",
+    "pressed_state" : "sym_keyboard_shift_locked",
+    "locked_state" :"sym_keyboard_shift_locked"
   },
   "key_alternatives" : {
-    "background" : "keyboard_key_preview_background",
+    "background" : "popup",
     "label_color" : "#c90620"
   },
   "more_keys" : {
-    "background" : "keyboard_key_preview_background"
+    "background" : "popup"
   }
 }

@@ -27,9 +27,9 @@ android {
         }
     }
     productFlavors {
-        keyboard_arabic {
+        spf_pirates_keyboardplus {
             flavorDimensions "default"
-            applicationId "com.keyboardlight.arabic"
+            applicationId "com.keyboardlight.pirates"
             versionCode 1
             versionName "1.0.1"
             signingConfig signingConfigs.key_keyboard
