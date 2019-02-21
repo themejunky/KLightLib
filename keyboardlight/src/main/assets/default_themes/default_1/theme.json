@@ -12,12 +12,12 @@
 
   "key_background" : {
     "key_numeric" : {
-      "default_state" : "key_numeric_normal",
-      "pressed_state" : "key_numeric_pressed"
+      "default_state" : "numeric_normal",
+      "pressed_state" : "numeric_presseed"
     },
     "key_qwerty" : {
-      "default_state" : "key_q_normal",
-      "pressed_state" : "key_q_pressed"
+      "default_state" : "q_normal",
+      "pressed_state" : "q_pressed"
     },
     "key_space" : {
       "default_state" : "key_space_normal",
