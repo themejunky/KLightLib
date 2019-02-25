@@ -34,7 +34,11 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -44,6 +48,9 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:customtabs:28.0.0'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
+    implementation 'com.android.support:support-media-compat:28.0.0'
     implementation 'com.android.support:support-annotations:28.0.0'
 
     implementation 'pub.devrel:easypermissions:0.3.0'
@@ -66,9 +73,9 @@ dependencies {
         transitive = true;
     }
     implementation project(':TJ_Gae-release')
-    implementation 'com.google.android.gms:play-services-auth:12.0.1'
-    implementation 'com.google.android.gms:play-services-analytics:12.0.1'
-    implementation 'com.google.android.gms:play-services-ads:12.0.1'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    implementation 'com.google.android.gms:play-services-analytics:16.0.7'
+    implementation 'com.google.android.gms:play-services-ads:17.1.3'
     implementation 'com.github.themejunky:AdsManager:v3.0'
     implementation 'com.appnext.sdk:native-ads2:2.+'
     implementation 'com.appnext.sdk:ads:2.+'

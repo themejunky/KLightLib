@@ -1,6 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.keyboardlight" >
     <application>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true"/>
+
         <service android:name="com.keyboard_settings.screens.activity.Sync.SyncService.ReSyncServiceInBackground" />
 
         <service android:name="com.keyboard_settings.screens.activity.Sync.SyncGmail.GmailSyncService" />
@@ -76,7 +81,7 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name="com.keyboard_theme_manager.MainFlavorActivity"/>
+        <activity android:name="com.keyboard_theme_manager.MainFlavorActivity2"/>
 
         <!--<activity-->
         <!--android:name="com.android.inputmethod.latin.setup.SetupActivity"-->

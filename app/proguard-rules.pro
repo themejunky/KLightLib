@@ -19,3 +19,18 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+#Picasso
+-dontwarn com.squareup.okhttp.
+-dontwarn com.squareup.okhttp.**
+-optimizations !class/unboxing/enum
+-dontwarn com.bignerdranch.**
+
+-keep class com.android.inputmethod.latin.** { *; }
+
+#-keep class com.keyboard_core.** { *; }
+#-keep class com.keyboard_theme_dictionary.** { *; }
+
+
+#-keep class com.keyboard_onboarding.** { *; }
+#-keep class com.keyboard_settings.** { *; }
+-keep class com.keyboard_theme_manager.** { *; }

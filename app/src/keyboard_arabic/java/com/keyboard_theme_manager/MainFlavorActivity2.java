@@ -13,11 +13,10 @@ import com.keyboard_theme_manager.screens.fragments.themes.ThemesFragment;
 import com.keyboard_theme_manager.screens.fragments.wallpapere.Wallpapers;
 
 
-public class MainFlavorActivity extends MainBaseActivity {
+public class MainFlavorActivity2 extends MainBaseActivity {
 
 
     protected void setUpViewPager() {
-
 
         mFragmentInstanceThemes = new ThemesFragment();
 
