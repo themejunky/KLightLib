@@ -179,7 +179,7 @@ public final class BinaryDictionary extends Dictionary {
     private static native void closeNative(long dict);
     private static native int getFormatVersionNative(long dict);
     private static native int getProbabilityNative(long dict, int[] word);
-    private static native int getMaxProbabilityOfExactMatchesNative(long dict, int[] word);
+    private  native int getMaxProbabilityOfExactMatchesNative(long dict, int[] word);
     private static native int getNgramProbabilityNative(long dict, int[][] prevWordCodePointArrays,
             boolean[] isBeginningOfSentenceArray, int[] word);
     private static native void getWordPropertyNative(long dict, int[] word,
