@@ -81,7 +81,7 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name="com.keyboard_theme_manager.MainFlavorActivity2"/>
+        <activity android:name="com.keyboard_theme_manager.MainFlavorActivity"/>
 
         <!--<activity-->
         <!--android:name="com.android.inputmethod.latin.setup.SetupActivity"-->
